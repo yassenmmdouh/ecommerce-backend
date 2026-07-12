@@ -66,7 +66,7 @@ Create a `.env` file
 
 ```env
 PORT=5000
-MONGO_URI=YOUR_MONGODB_CONNECTION_STRING
+MONGO_URI=mongodb://yaya12342020_db_user:0099Yasen@ac-2qrjuvm-shard-00-00.omqojaw.mongodb.net:27017,ac-2qrjuvm-shard-00-01.omqojaw.mongodb.net:27017,ac-2qrjuvm-shard-00-02.omqojaw.mongodb.net:27017/?ssl=true&replicaSet=atlas-13z5kc-shard-0&authSource=admin&appName=Cluster0
 NODE_ENV=development
 ```
 

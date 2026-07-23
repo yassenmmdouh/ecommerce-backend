@@ -50,7 +50,6 @@ exports.removeFromCart = asyncHandler(async (req, res) => {
     const { productId } = req.params;
     const cart = await getOrCreateCart();
     cart.items = cart.items.filter(item => item.product.toString() !== productId);
-await cart.save();
-await cart.populate('items.product');
-res.json(cart);
+    await cart.save();
+    res.json(cart);
 });

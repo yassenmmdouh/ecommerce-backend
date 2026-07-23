@@ -163,7 +163,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"name\": \"iPhone 15\",\r\n  \"description\": \"Apple smartphone\",\r\n  \"price\": 45000,\r\n  \"category\": \"6a529f0ff9e042ac01603ef7\",\r\n  \"countInStock\": 10\r\n}",
+              "raw": "{\r\n  \"name\": \"iPhone 15\",\r\n  \"description\": \"Apple smartphone\",\r\n  \"price\": 45000,\r\n  \"category\": \"6a529f0ff9e042ac01603ef7\",\r\n  \"stock\": 10\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -227,7 +227,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"name\": \"iPhone 15 Pro\",\r\n  \"description\": \"Updated Apple smartphone\",\r\n  \"price\": 50000,\r\n  \"category\": \"6a5257557da6b13727742137\",\r\n  \"countInStock\": 15\r\n}",
+              "raw": "{\r\n  \"name\": \"iPhone 15 Pro\",\r\n  \"description\": \"Updated Apple smartphone\",\r\n  \"price\": 50000,\r\n  \"category\": \"6a5257557da6b13727742137\",\r\n  \"stock\": 15\r\n}",
               "options": {
                 "raw": {
                   "language": "json"

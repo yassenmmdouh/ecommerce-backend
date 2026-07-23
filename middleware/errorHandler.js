@@ -1,10 +1,30 @@
 const errorHandler = (err, req, res, next) => {
-    const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
+
+    let statusCode = res.statusCode === 200 ? 500 : res.statusCode;
+    let message = err.message;
+
+    if (err.name === "ValidationError") {
+        statusCode = 400;
+        message = Object.values(err.errors)
+            .map(error => error.message)
+            .join(", ");
+    }
+
+    if (err.name === "CastError") {
+        statusCode = 400;
+        message = `Invalid ${err.path}: ${err.value}`;
+    }
+    if (err.code === 11000) {
+        statusCode = 409;
+        message = `${Object.keys(err.keyValue)[0]} already exists`;
+    }
 
     res.status(statusCode).json({
-        message: err.message,
-        stack: process.env.NODE_ENV === 'production' ? null : err.stack,
+        status: "error",
+        message,
+        stack: process.env.NODE_ENV === "production" ? null : err.stack
     });
+
 };
 
 module.exports = errorHandler;
